@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-dark: #0F172A;
+  --color-light: #F8FAFC;
+  --color-border: #E2E8F0;
+  --color-muted: #64748B;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  
+  --radius-xl: 1rem;
+}
+
+:root {
+  --background: #F8FAFC; /* Light Background */
+  --foreground: #0F172A; /* Dark Text */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #2563EB;
+  color: white;
+}
+
+/* Subtle gradient background utility */
+.bg-subtle-glow {
+  background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.03), transparent 40%);
+}
